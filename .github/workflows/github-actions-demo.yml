@@ -1,1 +1,16 @@
+name: Pierwszy GitHub worklow
+on: [push]
+jobs:
+  Check-python-version:
+    runs-on: ubuntu-latest
+    steps:
+      - run: python --version
+
+  
+  Test-app-with-pylint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - run:
 
